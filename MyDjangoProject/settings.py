@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'model',
+    'app01',
+    'app02',
 ]
 
 MIDDLEWARE = [
@@ -86,9 +88,40 @@ DATABASES = {
         'OPTIONS': {
             'autocommit': True,
         },
-    }
+    },
+    'db01': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'test1',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'OPTIONS': {
+            'autocommit': True,
+        },
+    },
+    'db02': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'test2',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'OPTIONS': {
+            'autocommit': True,
+        },
+    },
 }
-
+'''
+不同的app使用不同的数据库
+'''
+DATABASE_ROUTERS = ['MyDjangoProject.routers.DatabaseAppsRouter']
+DATABASE_APPS_MAPPING = {
+    # example:
+    # 'app_name':'database_name',
+    'app02': 'db02',
+    'app01': 'db01',
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators

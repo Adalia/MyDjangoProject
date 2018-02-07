@@ -17,11 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from MyDjangoProject import view
 from django.conf.urls import *
-from . import view,testdb
+from . import view, testdb
 
 
 urlpatterns = [
-    #path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('', view.hello),
-    path('db/',testdb.testdb),
+    path('db/', testdb.testdb),
+    path('1/', testdb.app01),
+    path('2/', testdb.app02),
 ]
