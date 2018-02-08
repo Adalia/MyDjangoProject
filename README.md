@@ -1,7 +1,7 @@
 #### MyDjangoProject
 ##### 该项目是初次接触Django建立的项目，里面主要尝试了不同的app使用不同数据库的操作
 
-多数据库操作参考博客：http://blog.csdn.net/songfreeman/article/details/70229839
+多数据库操作参考博客：http://blog.csdn.net/songfreeman/article/details/70229839；http://www.jb51.net/article/123054.htm
 
 启动项目：
     python manage.py runserver 0.0.0.0:8000
