@@ -15,3 +15,8 @@
 1.现在模型里修改;
 2.python manage.py makemigrations appname  # 让 Django 知道我们在我们的模型有一些变更;
 3.python manage.py migrate --database=db02  # 创建表结构;
+
+
+python==3.6
+Django==2.0.2
+PyMySQL==0.8.0
