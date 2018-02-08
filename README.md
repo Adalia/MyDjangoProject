@@ -17,6 +17,6 @@
 3.python manage.py migrate --database=db02  # 创建表结构;
 
 
-python==3.6
-Django==2.0.2
-PyMySQL==0.8.0
+python==3.6; 
+Django==2.0.2; 
+PyMySQL==0.8.0; 
